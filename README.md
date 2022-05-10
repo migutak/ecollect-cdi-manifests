@@ -1,0 +1,1 @@
+# ecollect-cdi-manifests
