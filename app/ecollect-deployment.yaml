@@ -1,0 +1,44 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ecollect-svc
+spec:
+  selector:
+    app: ecollect
+  ports:
+    - protocol: TCP
+      name: 4430-tcp
+      port: 4430
+      targetPort: 4430
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ecollect
+  namespace: ecol
+  labels:
+    app: ecollect
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ecollect
+  template:
+    metadata:
+      labels:
+        app: ecollect
+    spec:
+      containers:
+      - name: ecollect
+        image: docker.io/migutak/ecollect:4
+        ports:
+        - containerPort: 4430
+        resources:
+          requests:
+            memory: "100Mi"
+            cpu: "100m"
+          limits:
+            memory: "1Gi"
+            cpu: "500m"
