@@ -1,0 +1,43 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ecollectedc-svc
+spec:
+  selector:
+    app: ecollectedc
+  ports:
+    - protocol: TCP
+      name: 4430-tcp
+      port: 4430
+      targetPort: 4430
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ecollectedc
+  namespace: ecol
+  labels:
+    app: ecollectedc
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ecollectedc
+  template:
+    metadata:
+      labels:
+        app: ecollectedc
+    spec:
+      containers:
+      - name: ecollectedc
+        image: ecollect-registry.co-opbank.co.ke:30677/ecollectedc:4.3.2
+        ports:
+        - containerPort: 4430
+        resources:
+          requests:
+            memory: "100Mi"
+            cpu: "100m"
+          limits:
+            memory: "1Gi"
+            cpu: "500m"

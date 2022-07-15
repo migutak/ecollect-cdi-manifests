@@ -1,0 +1,22 @@
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: database-prod-svc
+  namespace: ecol
+spec:
+  ports:
+  - port: 1559
+---
+apiVersion: v1
+kind: Endpoints
+metadata:
+  name: database-prod-svc
+  namespace: ecol
+subsets:
+  - addresses:
+      - ip: 172.16.210.103
+      - ip: 172.16.210.105
+      - ip: 172.16.210.104
+    ports:
+      - port: 1559

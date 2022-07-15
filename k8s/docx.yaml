@@ -1,0 +1,51 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: docx-svc
+  namespace: ecol
+  label:
+    app: docx
+spec:
+  selector:
+    app: docx
+  ports:
+    - protocol: TCP
+      port: 8004
+      name: 8004-tcp
+      targetPort: 8004
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: docx
+  namespace: ecol
+  labels:
+    app: docx
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: docx
+  template:
+    metadata:
+      labels:
+        app: docx
+    spec:
+      containers:
+      - name: docx
+        image: ecollect-registry.co-opbank.co.ke:30677/docxletters:5.6.8
+        envFrom:
+          - configMapRef:
+              name: ecol-config
+          - secretRef:
+                name: ecol-secrets
+        ports:
+        - containerPort: 8004
+        resources:
+          requests:
+            memory: "1Gi"
+            cpu: '100m'
+          limits:
+            memory: "2Gi"
+            cpu: '500m'
