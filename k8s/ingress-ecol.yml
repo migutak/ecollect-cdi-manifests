@@ -21,3 +21,17 @@ spec:
             name: ecollect-app
             port:
               number: 4430
+      - path: /api
+        pathType: Prefix
+        backend:
+          service:
+            name: ecollectapis-svc
+            port:
+              number: 8000
+      - path: /nodeapi
+        pathType: Prefix
+        backend:
+          service:
+            name: nodeapis-svc
+            port:
+              number: 6001
