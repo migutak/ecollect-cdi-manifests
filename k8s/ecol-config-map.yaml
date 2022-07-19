@@ -4,10 +4,10 @@ metadata:
   name: ecol-config
   namespace: ecol
 data:
-  CONNECTIONSTRING: 172.30.188.210:1560/ECOLLTST
+  CONNECTIONSTRING: copkdrdutil2-scan.co-opbank.co.ke:1560/ECOLLTST
   DB_DATABASE: ECOLLTST
   DB_PORT: '1560'
-  DB_HOST: '172.30.188.210'
+  DB_HOST: copkdrdutil2-scan.co-opbank.co.ke
   REDISSVC: redis-svc.ecol.svc.cluster.local
   REDISPORT: '6379'
   NODEAPIURL: http://nodeapis-svc.ecol.svc.cluster.local:6001
@@ -32,4 +32,4 @@ data:
   ELASTICSEARCH: http://es-svc.ecol.svc.cluster.local:9200/
   minio.properties: |
     MINIO_PORT=9005
-  TOEMAIL: "marithi@co-opbank.co.ke,vomwega@co-opbank.co.ke,fkioko@co-opbank.co.ke"
+  TOEMAIL: 'marithi@co-opbank.co.ke,vomwega@co-opbank.co.ke,fkioko@co-opbank.co.ke'

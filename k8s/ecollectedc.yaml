@@ -31,7 +31,7 @@ spec:
     spec:
       containers:
       - name: ecollectedc
-        image: ecollect-registry.co-opbank.co.ke:30677/ecollectedc:4.3.2
+        image: ecollect-registry.co-opbank.co.ke:30677/ecollectedc:4.3.3
         ports:
         - containerPort: 4430
         resources:

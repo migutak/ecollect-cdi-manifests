@@ -19,7 +19,7 @@ spec:
         spec:
           containers:
           - name: dailychecksemail
-            image: ecollect-registry.co-opbank.co.ke:30677/dailychecksemail:4.3
+            image: ecollect-registry.co-opbank.co.ke:30677/dailychecksemail:18072022160825.2
             command: ["node",  "index.js"]
             envFrom:
           - configMapRef:

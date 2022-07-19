@@ -35,7 +35,7 @@ spec:
     spec:
       containers:
       - name: adlogin
-        image: ecollect-registry.co-opbank.co.ke:30677/adlogin:4.1
+        image: ecollect-registry.co-opbank.co.ke:30677/adlogin:18072022143745.4
         ports:
         - containerPort: 6650
         resources:

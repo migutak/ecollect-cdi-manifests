@@ -34,7 +34,7 @@ spec:
     spec:
       containers:
       - name: docx
-        image: ecollect-registry.co-opbank.co.ke:30677/docxletters:5.6.8
+        image: ecollect-registry.co-opbank.co.ke:30677/docxletters:18072022143446.4
         envFrom:
           - configMapRef:
               name: ecol-config
@@ -44,8 +44,8 @@ spec:
         - containerPort: 8004
         resources:
           requests:
-            memory: "1Gi"
+            memory: "100Mi"
             cpu: '100m'
           limits:
-            memory: "2Gi"
+            memory: "1Gi"
             cpu: '500m'

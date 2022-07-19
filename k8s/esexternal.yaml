@@ -18,3 +18,12 @@ subsets:
       - ip: 172.16.20.139
     ports:
       - port: 9200
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: external-mysql-service
+spec:
+  type: ExternalName
+  externalName: example.domain.name
+selector: {} 

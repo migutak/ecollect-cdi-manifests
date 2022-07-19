@@ -34,7 +34,7 @@ spec:
     spec:
       containers:
       - name: node-email
-        image: ecollect-registry.co-opbank.co.ke:30677/node-email:4.7.6
+        image: ecollect-registry.co-opbank.co.ke:30677/node-email:18072022152400.2
         envFrom:
           - configMapRef:
               name: ecol-config
