@@ -34,7 +34,7 @@ spec:
     spec:
       containers:
       - name: accountstoelastic
-        image: ecollect-registry.co-opbank.co.ke:30677/accounts_to_elastic:5.4
+        image: ecollecttst-registry.co-opbank.co.ke:30677/accounts_to_elastic:5.4
         envFrom:
           - configMapRef:
               name: ecol-config

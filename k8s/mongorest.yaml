@@ -4,7 +4,7 @@ kind: Service
 metadata:
   name: mongorest-svc
   namespace: ecol
-  label:
+  labels:
     app: mongorest
 spec:
   selector:
@@ -34,7 +34,7 @@ spec:
     spec:
       containers:
       - name: mongorest
-        image: ecollect-registry.co-opbank.co.ke:30677/mongorest:18072022153040.2
+        image: ecollecttst-registry.co-opbank.co.ke:30677/mongorest:18072022153040.2
         envFrom:
           - configMapRef:
               name: ecol-config

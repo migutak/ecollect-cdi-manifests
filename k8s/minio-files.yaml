@@ -4,7 +4,7 @@ kind: Service
 metadata:
   name: minio-files-svc
   namespace: ecol
-  label:
+  labels:
     app: minio-files
 spec:
   selector:
@@ -34,7 +34,7 @@ spec:
     spec:
       containers:
       - name: minio-files
-        image: ecollect-registry.co-opbank.co.ke:30677/minio_files:18072022150220.2
+        image: ecollecttst-registry.co-opbank.co.ke:30677/minio_files:18072022150220.2
         envFrom:
           - configMapRef:
               name: ecol-config

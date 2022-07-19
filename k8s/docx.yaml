@@ -4,7 +4,7 @@ kind: Service
 metadata:
   name: docx-svc
   namespace: ecol
-  label:
+  labels:
     app: docx
 spec:
   selector:
@@ -34,7 +34,7 @@ spec:
     spec:
       containers:
       - name: docx
-        image: ecollect-registry.co-opbank.co.ke:30677/docxletters:18072022143446.4
+        image: ecollecttst-registry.co-opbank.co.ke:30677/docxletters:18072022143446.4
         envFrom:
           - configMapRef:
               name: ecol-config

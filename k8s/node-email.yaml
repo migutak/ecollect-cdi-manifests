@@ -4,7 +4,7 @@ kind: Service
 metadata:
   name: node-email-svc
   namespace: ecol
-  label:
+  labels:
     app: node-email
 spec:
   selector:
@@ -34,7 +34,7 @@ spec:
     spec:
       containers:
       - name: node-email
-        image: ecollect-registry.co-opbank.co.ke:30677/node-email:18072022152400.2
+        image: ecollecttst-registry.co-opbank.co.ke:30677/node-email:18072022152400.2
         envFrom:
           - configMapRef:
               name: ecol-config
