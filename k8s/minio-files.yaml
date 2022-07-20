@@ -49,3 +49,5 @@ spec:
           limits:
             memory: "1Gi"
             cpu: '200m'
+      imagePullSecrets:
+      - name: reg-cred-secret

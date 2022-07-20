@@ -70,6 +70,8 @@ spec:
         volumeMounts:
           - name: redis-data
             mountPath: /usr/share/redis
+      imagePullSecrets:
+      - name: reg-cred-secret
   volumeClaimTemplates:                     
   - metadata:
       name: redis-data
