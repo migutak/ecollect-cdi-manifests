@@ -17,7 +17,7 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: redis-data
+  name: redis-data-redis-0
   namespace: ecol
 spec:
   accessModes:
