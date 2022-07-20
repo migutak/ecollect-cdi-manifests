@@ -4,7 +4,7 @@ kind: Service
 metadata:
   name: upload-svc
   namespace: ecol
-  label:
+  labels:
     app: upload
 spec:
   selector:

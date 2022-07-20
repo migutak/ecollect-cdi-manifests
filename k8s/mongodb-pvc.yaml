@@ -11,12 +11,11 @@ spec:
   nfs:
     path: /mnt/data/mongodata
     server: 172.16.20.139
-    persistentVolumeReclaimPolicy: Retain
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: mongodb-pvc
+  name: mongodb-data-mongodb-0
   namespace: ecol
 spec:
   accessModes:

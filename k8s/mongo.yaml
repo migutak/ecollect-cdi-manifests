@@ -2,9 +2,9 @@ apiVersion: v1
 kind: Service
 metadata:
   name: mongodb-svc
+  namespace: ecol
   labels:
     app: mongodb
-    namespace: ecol
 spec:
   ports:
     - port: 27017
@@ -16,7 +16,8 @@ spec:
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  name: mongodb-sts
+  name: mongodb
+  namespace: ecol
 spec:
   selector:
     matchLabels:
@@ -31,18 +32,18 @@ spec:
       terminationGracePeriodSeconds: 10
       containers:
       - name: mongodb
-        image: ecollect-registry.co-opbank.co.ke:30677/mongo
+        image: ecollecttst-registry.co-opbank.co.ke:30677/mongo
         securityContext:
           runAsUser: 1000
         args: ["--dbpath","/data/db"]
         ports:
           - containerPort: 27017
         volumeMounts:
-          - name: mongodb-pvc
+          - name: mongodb-data
             mountPath: /data/db
   volumeClaimTemplates:
     - metadata:
-        name: mongodb-pvc
+        name: mongodb-data
       spec:
         accessModes: ["ReadWriteOnce"]
         resources:

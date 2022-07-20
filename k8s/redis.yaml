@@ -47,7 +47,7 @@ metadata:
   name: redis
   namespace: ecol
 spec:
-  serviceName: "redis"
+  serviceName: redis
   selector:
     matchLabels:
       app: redis

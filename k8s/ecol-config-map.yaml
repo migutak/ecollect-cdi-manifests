@@ -24,7 +24,7 @@ data:
   footerfirst: 'Directors: John Murugu (Chairman), Dr. Gideon Muriuki (Group M.D & CEO), M. Malonza (Vice Chairman), '
   footersecond: 'J. Sitienei, B. Simiyu, P. Githendu, W. Ongoro, R. Kimanthi, W. Mwambia, W. Welton (Mrs), M. Karangatha (Mrs), L. Karissa, G. Mburia'
   footersecond: 'Directors: John Murugu (Chairman), Dr. Gideon Muriuki (Group M.D & CEO), M. Malonza (Vice Chairman), J. Sitienei, B. Simiyu, P. Githendu, W.Ongoro, R.Kimanthi, W. Mwambia, W. Welton (Mrs), M. Karangatha (Mrs), L. Karissa, G. Mburia'
-  MONGODB: mongodb://172.30.31.149/mongorest
+  MONGODB: mongodb://mongodb-svc.ecol.svc.cluster.local/mongorest
   FROM: ecollect@co-opbank.co.ke
   TO: ecollect@co-opbank.co.ke
   SERVERURL: http://172.16.19.151:9005
