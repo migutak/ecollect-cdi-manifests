@@ -41,6 +41,8 @@ spec:
         volumeMounts:
           - name: mongodb-data
             mountPath: /data/db
+      imagePullSecrets:
+      - name: reg-cred-secret
   volumeClaimTemplates:
     - metadata:
         name: mongodb-data
