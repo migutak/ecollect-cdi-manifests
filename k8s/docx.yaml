@@ -23,7 +23,7 @@ metadata:
   labels:
     app: docx
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: docx
@@ -34,7 +34,7 @@ spec:
     spec:
       containers:
       - name: docx
-        image: ecollecttst-registry.co-opbank.co.ke:30677/docxletters:18072022143446.4
+        image: ecollect-registry.co-opbank.co.ke:30388/docxletters:18072022143446.4
         envFrom:
           - configMapRef:
               name: ecol-config

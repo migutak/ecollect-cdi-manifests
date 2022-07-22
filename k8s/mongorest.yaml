@@ -34,7 +34,7 @@ spec:
     spec:
       containers:
       - name: mongorest
-        image: ecollecttst-registry.co-opbank.co.ke:30677/mongorest:18072022153040.2
+        image: ecollect-registry.co-opbank.co.ke:30388/mongorest:18072022153040.2
         envFrom:
           - configMapRef:
               name: ecol-config

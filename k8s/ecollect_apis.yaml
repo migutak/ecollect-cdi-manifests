@@ -35,7 +35,7 @@ spec:
     spec:
       containers:
       - name: ecollectapis
-        image: ecollect-registry.co-opbank.co.ke:30677/ecollect_apis:18072022143136.4
+        image: ecollect-registry.co-opbank.co.ke:30388/ecollect_apis:18072022143136.4
         envFrom:
           - configMapRef:
               name: ecol-config

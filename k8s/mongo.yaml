@@ -46,7 +46,7 @@ spec:
       terminationGracePeriodSeconds: 10
       containers:
       - name: mongodb
-        image: ecollecttst-registry.co-opbank.co.ke:30677/mongo
+        image: ecollect-registry.co-opbank.co.ke:30388/mongo
         securityContext:
           runAsUser: 1000
         args: ["--dbpath","/data/db"]

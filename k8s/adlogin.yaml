@@ -4,7 +4,7 @@ kind: Service
 metadata:
   name: adlogin-svc
   namespace: ecol
-  label:
+  labels:
     app: adlogin
 spec:
   selector:
@@ -35,7 +35,7 @@ spec:
     spec:
       containers:
       - name: adlogin
-        image: ecollect-registry.co-opbank.co.ke:30677/adlogin:18072022143745.4
+        image: ecollect-registry.co-opbank.co.ke:30388/adlogin:18072022143745.4
         ports:
         - containerPort: 6650
         resources:

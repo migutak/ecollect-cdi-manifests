@@ -23,7 +23,7 @@ metadata:
   labels:
     app: nodeapis
 spec:
-  replicas: 1
+  replicas: 4
   selector:
     matchLabels:
       app: nodeapis
@@ -34,7 +34,7 @@ spec:
     spec:
       containers:
       - name: nodeapis
-        image: ecollect-registry.co-opbank.co.ke:30677/oraclenode-apis-lb4:18072022142847.17
+        image: ecollect-registry.co-opbank.co.ke:30388/oraclenode-apis-lb4:18072022142847.17
         envFrom:
           - configMapRef:
               name: ecol-config

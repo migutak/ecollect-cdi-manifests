@@ -20,7 +20,7 @@ metadata:
   labels:
     app: cacheapi
 spec:
-  replicas: 1
+  replicas: 4
   selector:
     matchLabels:
       app: cacheapi
@@ -31,7 +31,7 @@ spec:
     spec:
       containers:
       - name: cacheapi
-        image: ecollect-registry.co-opbank.co.ke:30677/cache:18072022151323.2
+        image: ecollect-registry.co-opbank.co.ke:30388/cache:18072022151323.2
         envFrom:
           - configMapRef:
               name: ecol-config

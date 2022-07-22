@@ -34,7 +34,7 @@ spec:
     spec:
       containers:
       - name: activitytomq
-        image: docker.io/migutak/activitytomq:5.4.1
+        image: ecollect-registry.co-opbank.co.ke:30388/activitytomq:5.4.2
         envFrom:
           - configMapRef:
               name: ecol-config

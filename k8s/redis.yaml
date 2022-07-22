@@ -61,7 +61,7 @@ spec:
     spec:
       containers:
       - name: redis
-        image: ecollecttst-registry.co-opbank.co.ke:30677/redis:6.2.6
+        image: ecollect-registry.co-opbank.co.ke:30388/ubuntu/redis
         resources:
           limits:
             memory: 2Gi

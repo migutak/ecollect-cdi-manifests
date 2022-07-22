@@ -4,7 +4,7 @@ kind: Service
 metadata:
   name: callscheduller-svc
   namespace: ecol
-  label:
+  labels:
     app: callscheduller
 spec:
   selector:
@@ -34,7 +34,7 @@ spec:
     spec:
       containers:
       - name: callscheduller
-        image: ecollect-registry.co-opbank.co.ke:30677/callscheduller:18072022155511.2
+        image: ecollect-registry.co-opbank.co.ke:30388/callscheduller:18072022155511.2
         envFrom:
           - configMapRef:
               name: ecol-config
