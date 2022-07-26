@@ -5,6 +5,7 @@ metadata:
   namespace: ecol
 data:
   CONNECTIONSTRING: copkprdcont3-scan.co-opbank.co.ke:1559/ECOLLECT
+  NODE_ORACLEDB_CONNECTIONSTRING: copkprdcont3-scan.co-opbank.co.ke:1559/ECOLLECT
   DB_DATABASE: ECOLLTST
   DB_PORT: '1559'
   DB_HOST: copkprdcont3-scan.co-opbank.co.ke
@@ -13,7 +14,7 @@ data:
   NODEAPIURL: http://nodeapis-svc.ecol.svc.cluster.local:6001
   NODEAPI: http://nodeapis-svc.ecol.svc.cluster.local:6001
   URL: http://ecollectapis-svc.ecol.svc.cluster.local:8000
-  MINIO_ENDPOINT: '172.16.19.151'
+  MINIO_ENDPOINT: '172.16.204.74'
   FILEPATH: /tmp/
   IMAGEPATH: /app/docxletters/routes
   SENDEMAILURL: http://node-email-svc.ecol.svc.cluster.local:8005/ipfcancellation/email
@@ -27,7 +28,7 @@ data:
   MONGODB: mongodb://mongodb-svc.ecol.svc.cluster.local/mongorest
   FROM: ecollect@co-opbank.co.ke
   TO: ecollect@co-opbank.co.ke
-  SERVERURL: http://172.16.19.151:9005
+  SERVERURL: http://172.16.204:9000
   RABBITMQ: amqp://rabbitmq.ecol.svc.cluster.local
   ELASTICSEARCH: http://es-svc.ecol.svc.cluster.local:9200/
   MINIO_PORT: '9005'

@@ -1,21 +1,18 @@
----
 apiVersion: v1
 kind: Service
 metadata:
   name: adlogin-svc
   namespace: ecol
-  labels:
-    app: adlogin
 spec:
   selector:
     app: adlogin
   ports:
     - protocol: TCP
-      name: 6650-tcp
       port: 6650
+      name: 6650-tcp
       targetPort: 6650
-
 ---
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -24,7 +21,7 @@ metadata:
   labels:
     app: adlogin
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: adlogin
@@ -41,7 +38,7 @@ spec:
         resources:
           requests:
             memory: "1Gi"
-            cpu: "500m"
+            cpu: "100m"
           limits:
             memory: "1Gi"
             cpu: "500m"

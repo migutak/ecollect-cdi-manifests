@@ -48,3 +48,17 @@ spec:
             cpu: '200m'
       imagePullSecrets:
       - name: reg-cred-secret
+---
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+ name: hpa-cacheapi
+ namespace: ecol
+spec:
+ scaleTargetRef:
+   apiVersion: apps/v1
+   kind: Deployment
+   name: cacheapi
+ minReplicas: 4
+ maxReplicas: 10
+ targetCPUUtilizationPercentage: 70 

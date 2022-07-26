@@ -5,7 +5,7 @@ metadata:
     nginx.ingress.kubernetes.io/proxy-body-size: "0"
     nginx.ingress.kubernetes.io/proxy-read-timeout: "600"
     nginx.ingress.kubernetes.io/proxy-send-timeout: "600"
-  name: ecollect
+  name: ecollect-ing
   namespace: ecol
 spec:
   ingressClassName: nginx
@@ -33,3 +33,17 @@ spec:
             name: nodeapis-svc
             port:
               number: 6001
+      - path: /cache
+        pathType: Prefix
+        backend:
+          service:
+            name: cacheapi-svc
+            port:
+              number: 5600
+      - path: /adlogin
+        pathType: Prefix
+        backend:
+          service:
+            name: adlogin-svc
+            port:
+              number: 6650
