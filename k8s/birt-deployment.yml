@@ -16,9 +16,6 @@ spec:
       nodePort: 32273
   type: NodePort
 --- 
-# kubectl -n ecol create configmap server-xml-cm --from-file=../birt/server.xml
-# kubectl -n ecol create configmap context-xml-cm --from-file=../birt/context.xml
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -39,11 +36,6 @@ spec:
       containers:
       - name: birt
         image: migutak/birt:25072022.2
-        volumeMounts:
-        - name: server-xml-volume
-          mountPath: /usr/local/tomcat/conf/server.xml
-        - name: context-xml-volume
-          mountPath: /usr/local/tomcat/conf/context.xml
         ports:
         - containerPort: 8080
         resources:
@@ -53,13 +45,19 @@ spec:
           limits:
             memory: "1Gi"
             cpu: '500m'
-      volumes:
-      - name: server-xml-volume
-        configMap:
-          name: server-xml-cm
-      - name: context-xml-volume
-        configMap:
-          name: context-xml-cm
       imagePullSecrets:
       - name: reg-cred-secret
-      
+---
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+ name: hpa-nodeapis
+ namespace: ecol
+spec:
+ scaleTargetRef:
+   apiVersion: apps/v1
+   kind: Deployment
+   name: nodeapis
+ minReplicas: 3
+ maxReplicas: 10
+ targetCPUUtilizationPercentage: 70      
