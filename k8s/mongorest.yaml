@@ -51,3 +51,17 @@ spec:
             cpu: '200'
       imagePullSecrets:
       - name: reg-cred-secret
+---
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+ name: hpa-mongorest
+ namespace: ecol
+spec:
+ scaleTargetRef:
+   apiVersion: apps/v1
+   kind: Deployment
+   name: mongorest
+ minReplicas: 1
+ maxReplicas: 4
+ targetCPUUtilizationPercentage: 70

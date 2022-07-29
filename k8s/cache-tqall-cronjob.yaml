@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: CronJob
 metadata:
-  name: utilizationrpt
+  name: cachetqall
   namespace: ecol
 spec:
   schedule: "0 0 6 * * *"      #everyday 30th

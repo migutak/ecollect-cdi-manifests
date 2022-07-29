@@ -37,11 +37,24 @@ spec:
         - containerPort: 6650
         resources:
           requests:
-            memory: "1Gi"
+            memory: "100Mi"
             cpu: "100m"
           limits:
             memory: "1Gi"
             cpu: "500m"
       imagePullSecrets:
       - name: reg-cred-secret
-      
+---
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+ name: hpa-adlogin
+ namespace: ecol
+spec:
+ scaleTargetRef:
+   apiVersion: apps/v1
+   kind: Deployment
+   name: adlogin
+ minReplicas: 2
+ maxReplicas: 4
+ targetCPUUtilizationPercentage: 70

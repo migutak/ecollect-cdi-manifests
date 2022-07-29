@@ -47,3 +47,24 @@ spec:
             name: adlogin-svc
             port:
               number: 6650
+      - path: /mongorest
+        pathType: Prefix
+        backend:
+          service:
+            name: mongorest-svc
+            port:
+              number: 8501
+      - path: /demandemail
+        pathType: Prefix
+        backend:
+          service:
+            name: node-email-svc
+            port:
+              number: 8005
+      - path: /docx
+        pathType: Prefix
+        backend:
+          service:
+            name: docx-svc
+            port:
+              number: 8004
