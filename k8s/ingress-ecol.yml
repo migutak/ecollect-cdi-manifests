@@ -33,6 +33,13 @@ spec:
             name: nodeapis-svc
             port:
               number: 6001
+      - path: /nodeapi-v2
+        pathType: Prefix
+        backend:
+          service:
+            name: nodeapisv3-svc
+            port:
+              number: 3000
       - path: /cache
         pathType: Prefix
         backend:

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
-    <property name="createdBy">Eclipse BIRT Designer Version 4.9.0.v201905231911</property>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.24" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.9.0.v202203150031</property>
     <property name="units">in</property>
     <property name="iconFile">/templates/blank_report.gif</property>
     <property name="layoutPreference">auto layout</property>
@@ -62,28 +62,10 @@
                     <text-property name="heading">CUSTNUMBER</text-property>
                 </structure>
                 <structure>
-                    <property name="columnName">PLANTITLE</property>
+                    <property name="columnName">CUSTNAME</property>
                     <property name="analysis">dimension</property>
-                    <text-property name="displayName">PLANTITLE</text-property>
-                    <text-property name="heading">PLANTITLE</text-property>
-                </structure>
-                <structure>
-                    <property name="columnName">OWNER</property>
-                    <property name="analysis">dimension</property>
-                    <text-property name="displayName">OWNER</text-property>
-                    <text-property name="heading">OWNER</text-property>
-                </structure>
-                <structure>
-                    <property name="columnName">CLIENT_NAME</property>
-                    <property name="analysis">dimension</property>
-                    <text-property name="displayName">CLIENT_NAME</text-property>
-                    <text-property name="heading">CLIENT_NAME</text-property>
-                </structure>
-                <structure>
-                    <property name="columnName">RROCODE</property>
-                    <property name="analysis">dimension</property>
-                    <text-property name="displayName">RROCODE</text-property>
-                    <text-property name="heading">RROCODE</text-property>
+                    <text-property name="displayName">CUSTNAME</text-property>
+                    <text-property name="heading">CUSTNAME</text-property>
                 </structure>
                 <structure>
                     <property name="columnName">AROCODE</property>
@@ -92,42 +74,43 @@
                     <text-property name="heading">AROCODE</text-property>
                 </structure>
                 <structure>
-                    <property name="columnName">SECTION</property>
+                    <property name="columnName">RROCODE</property>
                     <property name="analysis">dimension</property>
-                    <text-property name="displayName">SECTION</text-property>
-                    <text-property name="heading">SECTION</text-property>
+                    <text-property name="displayName">RROCODE</text-property>
+                    <text-property name="heading">RROCODE</text-property>
                 </structure>
                 <structure>
-                    <property name="columnName">CURRENCY</property>
+                    <property name="columnName">BRANCHCODE</property>
                     <property name="analysis">dimension</property>
-                    <text-property name="displayName">CURRENCY</text-property>
-                    <text-property name="heading">CURRENCY</text-property>
+                    <text-property name="displayName">BRANCHCODE</text-property>
+                    <text-property name="heading">BRANCHCODE</text-property>
                 </structure>
                 <structure>
-                    <property name="columnName">ORIGBALANCE</property>
-                    <property name="analysis">measure</property>
-                    <text-property name="displayName">ORIGBALANCE</text-property>
-                    <text-property name="heading">ORIGBALANCE</text-property>
+                    <property name="columnName">BRANCHNAME</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">BRANCHNAME</text-property>
+                    <text-property name="heading">BRANCHNAME</text-property>
                 </structure>
                 <structure>
-                    <property name="columnName">OUSTBALANCE</property>
-                    <property name="analysis">measure</property>
-                    <text-property name="displayName">OUSTBALANCE</text-property>
-                    <text-property name="heading">OUSTBALANCE</text-property>
+                    <property name="columnName">REGION</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">REGION</text-property>
+                    <text-property name="heading">REGION</text-property>
                 </structure>
                 <structure>
-                    <property name="columnName">TOTALARREARS</property>
-                    <property name="analysis">measure</property>
-                    <text-property name="displayName">TOTALARREARS</text-property>
-                    <text-property name="heading">TOTALARREARS</text-property>
+                    <property name="columnName">PLANTITLE</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">PLANTITLE</text-property>
+                    <text-property name="heading">PLANTITLE</text-property>
                 </structure>
                 <structure>
-                    <property name="columnName">DAYSINARR</property>
-                    <property name="analysis">measure</property>
-                    <text-property name="displayName">DAYSINARR</text-property>
-                    <text-property name="heading">DAYSINARR</text-property>
+                    <property name="columnName">PRODUCTCODE</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">PRODUCTCODE</text-property>
+                    <text-property name="heading">PRODUCTCODE</text-property>
                 </structure>
             </list-property>
+            <list-property name="parameters"/>
             <structure name="cachedMetaData">
                 <list-property name="resultSet">
                     <structure>
@@ -157,58 +140,43 @@
                     </structure>
                     <structure>
                         <property name="position">6</property>
-                        <property name="name">PLANTITLE</property>
+                        <property name="name">CUSTNAME</property>
                         <property name="dataType">string</property>
                     </structure>
                     <structure>
                         <property name="position">7</property>
-                        <property name="name">OWNER</property>
-                        <property name="dataType">string</property>
-                    </structure>
-                    <structure>
-                        <property name="position">8</property>
-                        <property name="name">CLIENT_NAME</property>
-                        <property name="dataType">string</property>
-                    </structure>
-                    <structure>
-                        <property name="position">9</property>
-                        <property name="name">RROCODE</property>
-                        <property name="dataType">string</property>
-                    </structure>
-                    <structure>
-                        <property name="position">10</property>
                         <property name="name">AROCODE</property>
                         <property name="dataType">string</property>
                     </structure>
                     <structure>
+                        <property name="position">8</property>
+                        <property name="name">RROCODE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">BRANCHCODE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">BRANCHNAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
                         <property name="position">11</property>
-                        <property name="name">SECTION</property>
+                        <property name="name">REGION</property>
                         <property name="dataType">string</property>
                     </structure>
                     <structure>
                         <property name="position">12</property>
-                        <property name="name">CURRENCY</property>
+                        <property name="name">PLANTITLE</property>
                         <property name="dataType">string</property>
                     </structure>
                     <structure>
                         <property name="position">13</property>
-                        <property name="name">ORIGBALANCE</property>
-                        <property name="dataType">decimal</property>
-                    </structure>
-                    <structure>
-                        <property name="position">14</property>
-                        <property name="name">OUSTBALANCE</property>
-                        <property name="dataType">decimal</property>
-                    </structure>
-                    <structure>
-                        <property name="position">15</property>
-                        <property name="name">TOTALARREARS</property>
-                        <property name="dataType">decimal</property>
-                    </structure>
-                    <structure>
-                        <property name="position">16</property>
-                        <property name="name">DAYSINARR</property>
-                        <property name="dataType">decimal</property>
+                        <property name="name">PRODUCTCODE</property>
+                        <property name="dataType">string</property>
                     </structure>
                 </list-property>
             </structure>
@@ -251,83 +219,62 @@
                 </structure>
                 <structure>
                     <property name="position">6</property>
-                    <property name="name">PLANTITLE</property>
-                    <property name="nativeName">PLANTITLE</property>
+                    <property name="name">CUSTNAME</property>
+                    <property name="nativeName">CUSTNAME</property>
                     <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
                 </structure>
                 <structure>
                     <property name="position">7</property>
-                    <property name="name">OWNER</property>
-                    <property name="nativeName">OWNER</property>
-                    <property name="dataType">string</property>
-                    <property name="nativeDataType">12</property>
-                </structure>
-                <structure>
-                    <property name="position">8</property>
-                    <property name="name">CLIENT_NAME</property>
-                    <property name="nativeName">CLIENT_NAME</property>
-                    <property name="dataType">string</property>
-                    <property name="nativeDataType">12</property>
-                </structure>
-                <structure>
-                    <property name="position">9</property>
-                    <property name="name">RROCODE</property>
-                    <property name="nativeName">RROCODE</property>
-                    <property name="dataType">string</property>
-                    <property name="nativeDataType">12</property>
-                </structure>
-                <structure>
-                    <property name="position">10</property>
                     <property name="name">AROCODE</property>
                     <property name="nativeName">AROCODE</property>
                     <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
                 </structure>
                 <structure>
+                    <property name="position">8</property>
+                    <property name="name">RROCODE</property>
+                    <property name="nativeName">RROCODE</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">BRANCHCODE</property>
+                    <property name="nativeName">BRANCHCODE</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">BRANCHNAME</property>
+                    <property name="nativeName">BRANCHNAME</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
                     <property name="position">11</property>
-                    <property name="name">SECTION</property>
-                    <property name="nativeName">SECTION</property>
+                    <property name="name">REGION</property>
+                    <property name="nativeName">REGION</property>
                     <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
                 </structure>
                 <structure>
                     <property name="position">12</property>
-                    <property name="name">CURRENCY</property>
-                    <property name="nativeName">CURRENCY</property>
+                    <property name="name">PLANTITLE</property>
+                    <property name="nativeName">PLANTITLE</property>
                     <property name="dataType">string</property>
                     <property name="nativeDataType">12</property>
                 </structure>
                 <structure>
                     <property name="position">13</property>
-                    <property name="name">ORIGBALANCE</property>
-                    <property name="nativeName">ORIGBALANCE</property>
-                    <property name="dataType">decimal</property>
-                    <property name="nativeDataType">2</property>
-                </structure>
-                <structure>
-                    <property name="position">14</property>
-                    <property name="name">OUSTBALANCE</property>
-                    <property name="nativeName">OUSTBALANCE</property>
-                    <property name="dataType">decimal</property>
-                    <property name="nativeDataType">2</property>
-                </structure>
-                <structure>
-                    <property name="position">15</property>
-                    <property name="name">TOTALARREARS</property>
-                    <property name="nativeName">TOTALARREARS</property>
-                    <property name="dataType">decimal</property>
-                    <property name="nativeDataType">2</property>
-                </structure>
-                <structure>
-                    <property name="position">16</property>
-                    <property name="name">DAYSINARR</property>
-                    <property name="nativeName">DAYSINARR</property>
-                    <property name="dataType">decimal</property>
-                    <property name="nativeDataType">2</property>
+                    <property name="name">PRODUCTCODE</property>
+                    <property name="nativeName">PRODUCTCODE</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
                 </structure>
             </list-property>
-            <xml-property name="queryText"><![CDATA[select a.*,t.custnumber,p.plantitle,p.owner, t.client_name,rrocode,arocode,section,currency,origbalance,oustbalance,totalarrears,daysinarr from tbl_s_accounts a left join tqall t on a.accnumber=t.accnumber left join tbl_s_plans p on a.planid=p.planid]]></xml-property>
+            <xml-property name="queryText"><![CDATA[select * from tbl_s_accounts]]></xml-property>
             <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
 <model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
   <Version>2.0</Version>
@@ -691,19 +638,13 @@
         <label id="106">
             <text-property name="text">Account Plan - (Accounts with simple a/c  plan)</text-property>
         </label>
-        <table id="6">
+        <table id="117">
             <property name="dataSet">Data Set</property>
             <list-property name="boundDataColumns">
                 <structure>
                     <property name="name">ACCNUMBER</property>
                     <text-property name="displayName">ACCNUMBER</text-property>
                     <expression name="expression" type="javascript">dataSetRow["ACCNUMBER"]</expression>
-                    <property name="dataType">string</property>
-                </structure>
-                <structure>
-                    <property name="name">PLANID</property>
-                    <text-property name="displayName">PLANID</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["PLANID"]</expression>
                     <property name="dataType">string</property>
                 </structure>
                 <structure>
@@ -725,27 +666,9 @@
                     <property name="dataType">string</property>
                 </structure>
                 <structure>
-                    <property name="name">PLANTITLE</property>
-                    <text-property name="displayName">PLANTITLE</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["PLANTITLE"]</expression>
-                    <property name="dataType">string</property>
-                </structure>
-                <structure>
-                    <property name="name">OWNER</property>
-                    <text-property name="displayName">OWNER</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["OWNER"]</expression>
-                    <property name="dataType">string</property>
-                </structure>
-                <structure>
-                    <property name="name">CLIENT_NAME</property>
-                    <text-property name="displayName">CLIENT_NAME</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["CLIENT_NAME"]</expression>
-                    <property name="dataType">string</property>
-                </structure>
-                <structure>
-                    <property name="name">RROCODE</property>
-                    <text-property name="displayName">RROCODE</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["RROCODE"]</expression>
+                    <property name="name">CUSTNAME</property>
+                    <text-property name="displayName">CUSTNAME</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["CUSTNAME"]</expression>
                     <property name="dataType">string</property>
                 </structure>
                 <structure>
@@ -755,244 +678,244 @@
                     <property name="dataType">string</property>
                 </structure>
                 <structure>
-                    <property name="name">SECTION</property>
-                    <text-property name="displayName">SECTION</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["SECTION"]</expression>
+                    <property name="name">RROCODE</property>
+                    <text-property name="displayName">RROCODE</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["RROCODE"]</expression>
                     <property name="dataType">string</property>
                 </structure>
                 <structure>
-                    <property name="name">CURRENCY</property>
-                    <text-property name="displayName">CURRENCY</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["CURRENCY"]</expression>
+                    <property name="name">BRANCHCODE</property>
+                    <text-property name="displayName">BRANCHCODE</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["BRANCHCODE"]</expression>
                     <property name="dataType">string</property>
                 </structure>
                 <structure>
-                    <property name="name">ORIGBALANCE</property>
-                    <text-property name="displayName">ORIGBALANCE</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["ORIGBALANCE"]</expression>
-                    <property name="dataType">decimal</property>
+                    <property name="name">BRANCHNAME</property>
+                    <text-property name="displayName">BRANCHNAME</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["BRANCHNAME"]</expression>
+                    <property name="dataType">string</property>
                 </structure>
                 <structure>
-                    <property name="name">OUSTBALANCE</property>
-                    <text-property name="displayName">OUSTBALANCE</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["OUSTBALANCE"]</expression>
-                    <property name="dataType">decimal</property>
+                    <property name="name">REGION</property>
+                    <text-property name="displayName">REGION</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["REGION"]</expression>
+                    <property name="dataType">string</property>
                 </structure>
                 <structure>
-                    <property name="name">TOTALARREARS</property>
-                    <text-property name="displayName">TOTALARREARS</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["TOTALARREARS"]</expression>
-                    <property name="dataType">decimal</property>
+                    <property name="name">PLANTITLE</property>
+                    <text-property name="displayName">PLANTITLE</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["PLANTITLE"]</expression>
+                    <property name="dataType">string</property>
                 </structure>
                 <structure>
-                    <property name="name">DAYSINARR</property>
-                    <text-property name="displayName">DAYSINARR</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["DAYSINARR"]</expression>
-                    <property name="dataType">decimal</property>
+                    <property name="name">PRODUCTCODE</property>
+                    <text-property name="displayName">PRODUCTCODE</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["PRODUCTCODE"]</expression>
+                    <property name="dataType">string</property>
                 </structure>
             </list-property>
-            <column id="90"/>
-            <column id="91"/>
-            <column id="92"/>
-            <column id="93"/>
-            <column id="94"/>
-            <column id="95"/>
-            <column id="96"/>
-            <column id="97"/>
-            <column id="98"/>
-            <column id="99"/>
-            <column id="100"/>
-            <column id="101"/>
-            <column id="102"/>
-            <column id="103"/>
-            <column id="104"/>
-            <column id="105"/>
+            <column id="181"/>
+            <column id="182"/>
+            <column id="183"/>
+            <column id="184"/>
+            <column id="185"/>
+            <column id="186"/>
+            <column id="187"/>
+            <column id="188"/>
+            <column id="189"/>
+            <column id="190"/>
+            <column id="191"/>
+            <column id="192"/>
             <header>
-                <row id="7">
-                    <cell id="8">
-                        <label id="9">
+                <row id="118">
+                    <cell id="119">
+                        <property name="textAlign">left</property>
+                        <label id="120">
                             <text-property name="text">ACCNUMBER</text-property>
                         </label>
                     </cell>
-                    <cell id="10">
-                        <label id="11">
-                            <text-property name="text">PLANID</text-property>
-                        </label>
-                    </cell>
-                    <cell id="12">
-                        <label id="13">
+                    <cell id="121">
+                        <property name="textAlign">left</property>
+                        <label id="122">
                             <text-property name="text">DATEUPDATED</text-property>
                         </label>
                     </cell>
-                    <cell id="14">
-                        <label id="15">
+                    <cell id="123">
+                        <property name="textAlign">left</property>
+                        <label id="124">
                             <text-property name="text">UPDATEBY</text-property>
                         </label>
                     </cell>
-                    <cell id="16">
-                        <label id="17">
+                    <cell id="125">
+                        <property name="textAlign">left</property>
+                        <label id="126">
                             <text-property name="text">CUSTNUMBER</text-property>
                         </label>
                     </cell>
-                    <cell id="18">
-                        <label id="19">
-                            <text-property name="text">PLANTITLE</text-property>
+                    <cell id="127">
+                        <property name="textAlign">left</property>
+                        <label id="128">
+                            <text-property name="text">CUSTNAME</text-property>
                         </label>
                     </cell>
-                    <cell id="20">
-                        <label id="21">
-                            <text-property name="text">OWNER</text-property>
-                        </label>
-                    </cell>
-                    <cell id="22">
-                        <label id="23">
-                            <text-property name="text">CLIENT_NAME</text-property>
-                        </label>
-                    </cell>
-                    <cell id="24">
-                        <label id="25">
-                            <text-property name="text">RROCODE</text-property>
-                        </label>
-                    </cell>
-                    <cell id="26">
-                        <label id="27">
+                    <cell id="129">
+                        <property name="textAlign">left</property>
+                        <label id="130">
                             <text-property name="text">AROCODE</text-property>
                         </label>
                     </cell>
-                    <cell id="28">
-                        <label id="29">
-                            <text-property name="text">SECTION</text-property>
+                    <cell id="131">
+                        <property name="textAlign">left</property>
+                        <label id="132">
+                            <text-property name="text">RROCODE</text-property>
                         </label>
                     </cell>
-                    <cell id="30">
-                        <label id="31">
-                            <text-property name="text">CURRENCY</text-property>
+                    <cell id="133">
+                        <property name="textAlign">left</property>
+                        <label id="134">
+                            <text-property name="text">BRANCHCODE</text-property>
                         </label>
                     </cell>
-                    <cell id="32">
-                        <label id="33">
-                            <text-property name="text">ORIGBALANCE</text-property>
+                    <cell id="135">
+                        <property name="textAlign">left</property>
+                        <label id="136">
+                            <text-property name="text">BRANCHNAME</text-property>
                         </label>
                     </cell>
-                    <cell id="34">
-                        <label id="35">
-                            <text-property name="text">OUSTBALANCE</text-property>
+                    <cell id="137">
+                        <property name="textAlign">left</property>
+                        <label id="138">
+                            <text-property name="text">REGION</text-property>
                         </label>
                     </cell>
-                    <cell id="36">
-                        <label id="37">
-                            <text-property name="text">TOTALARREARS</text-property>
+                    <cell id="139">
+                        <property name="textAlign">left</property>
+                        <label id="140">
+                            <text-property name="text">PLANTITLE</text-property>
                         </label>
                     </cell>
-                    <cell id="38">
-                        <label id="39">
-                            <text-property name="text">DAYSINARR</text-property>
+                    <cell id="141">
+                        <property name="textAlign">left</property>
+                        <label id="142">
+                            <text-property name="text">PRODUCTCODE</text-property>
                         </label>
                     </cell>
                 </row>
             </header>
             <detail>
-                <row id="40">
-                    <cell id="41">
-                        <data id="42">
+                <row id="143">
+                    <cell id="144">
+                        <property name="textAlign">left</property>
+                        <data id="145">
                             <property name="resultSetColumn">ACCNUMBER</property>
                         </data>
                     </cell>
-                    <cell id="43">
-                        <data id="44">
-                            <property name="resultSetColumn">PLANID</property>
-                        </data>
-                    </cell>
-                    <cell id="45">
-                        <data id="46">
+                    <cell id="146">
+                        <property name="textAlign">left</property>
+                        <data id="147">
                             <property name="resultSetColumn">DATEUPDATED</property>
                         </data>
                     </cell>
-                    <cell id="47">
-                        <data id="48">
+                    <cell id="148">
+                        <property name="textAlign">left</property>
+                        <data id="149">
                             <property name="resultSetColumn">UPDATEBY</property>
                         </data>
                     </cell>
-                    <cell id="49">
-                        <data id="50">
+                    <cell id="150">
+                        <property name="textAlign">left</property>
+                        <data id="151">
                             <property name="resultSetColumn">CUSTNUMBER</property>
                         </data>
                     </cell>
-                    <cell id="51">
-                        <data id="52">
-                            <property name="resultSetColumn">PLANTITLE</property>
+                    <cell id="152">
+                        <property name="textAlign">left</property>
+                        <data id="153">
+                            <property name="resultSetColumn">CUSTNAME</property>
                         </data>
                     </cell>
-                    <cell id="53">
-                        <data id="54">
-                            <property name="resultSetColumn">OWNER</property>
-                        </data>
-                    </cell>
-                    <cell id="55">
-                        <data id="56">
-                            <property name="resultSetColumn">CLIENT_NAME</property>
-                        </data>
-                    </cell>
-                    <cell id="57">
-                        <data id="58">
-                            <property name="resultSetColumn">RROCODE</property>
-                        </data>
-                    </cell>
-                    <cell id="59">
-                        <data id="60">
+                    <cell id="154">
+                        <property name="textAlign">left</property>
+                        <data id="155">
                             <property name="resultSetColumn">AROCODE</property>
                         </data>
                     </cell>
-                    <cell id="61">
-                        <data id="62">
-                            <property name="resultSetColumn">SECTION</property>
+                    <cell id="156">
+                        <property name="textAlign">left</property>
+                        <data id="157">
+                            <property name="resultSetColumn">RROCODE</property>
                         </data>
                     </cell>
-                    <cell id="63">
-                        <data id="64">
-                            <property name="resultSetColumn">CURRENCY</property>
+                    <cell id="158">
+                        <property name="textAlign">left</property>
+                        <data id="159">
+                            <property name="resultSetColumn">BRANCHCODE</property>
                         </data>
                     </cell>
-                    <cell id="65">
-                        <data id="66">
-                            <property name="resultSetColumn">ORIGBALANCE</property>
+                    <cell id="160">
+                        <property name="textAlign">left</property>
+                        <data id="161">
+                            <property name="resultSetColumn">BRANCHNAME</property>
                         </data>
                     </cell>
-                    <cell id="67">
-                        <data id="68">
-                            <property name="resultSetColumn">OUSTBALANCE</property>
+                    <cell id="162">
+                        <property name="textAlign">left</property>
+                        <data id="163">
+                            <property name="resultSetColumn">REGION</property>
                         </data>
                     </cell>
-                    <cell id="69">
-                        <data id="70">
-                            <property name="resultSetColumn">TOTALARREARS</property>
+                    <cell id="164">
+                        <property name="textAlign">left</property>
+                        <data id="165">
+                            <property name="resultSetColumn">PLANTITLE</property>
                         </data>
                     </cell>
-                    <cell id="71">
-                        <data id="72">
-                            <property name="resultSetColumn">DAYSINARR</property>
+                    <cell id="166">
+                        <property name="textAlign">left</property>
+                        <data id="167">
+                            <property name="resultSetColumn">PRODUCTCODE</property>
                         </data>
                     </cell>
                 </row>
             </detail>
             <footer>
-                <row id="73">
-                    <cell id="74"/>
-                    <cell id="75"/>
-                    <cell id="76"/>
-                    <cell id="77"/>
-                    <cell id="78"/>
-                    <cell id="79"/>
-                    <cell id="80"/>
-                    <cell id="81"/>
-                    <cell id="82"/>
-                    <cell id="83"/>
-                    <cell id="84"/>
-                    <cell id="85"/>
-                    <cell id="86"/>
-                    <cell id="87"/>
-                    <cell id="88"/>
-                    <cell id="89"/>
+                <row id="168">
+                    <cell id="169">
+                        <property name="textAlign">left</property>
+                    </cell>
+                    <cell id="170">
+                        <property name="textAlign">left</property>
+                    </cell>
+                    <cell id="171">
+                        <property name="textAlign">left</property>
+                    </cell>
+                    <cell id="172">
+                        <property name="textAlign">left</property>
+                    </cell>
+                    <cell id="173">
+                        <property name="textAlign">left</property>
+                    </cell>
+                    <cell id="174">
+                        <property name="textAlign">left</property>
+                    </cell>
+                    <cell id="175">
+                        <property name="textAlign">left</property>
+                    </cell>
+                    <cell id="176">
+                        <property name="textAlign">left</property>
+                    </cell>
+                    <cell id="177">
+                        <property name="textAlign">left</property>
+                    </cell>
+                    <cell id="178">
+                        <property name="textAlign">left</property>
+                    </cell>
+                    <cell id="179">
+                        <property name="textAlign">left</property>
+                    </cell>
+                    <cell id="180">
+                        <property name="textAlign">left</property>
+                    </cell>
                 </row>
             </footer>
         </table>

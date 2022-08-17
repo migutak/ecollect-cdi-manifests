@@ -11,7 +11,7 @@ COPY birt_live /usr/local/tomcat/webapps/birt/
 COPY ojdbc8.jar /usr/local/tomcat/webapps/birt/WEB-INF/lib
 
 #Add custom configs
-COPY server.xml /usr/local/tomcat/conf/server.xml
+COPY server-uat.xml /usr/local/tomcat/conf/server.xml
 COPY tomcat-users.xml /usr/local/tomcat/conf/tomcat-users.xml
 COPY context.xml /usr/local/tomcat/conf/context.xml
 
@@ -25,4 +25,4 @@ CMD ["catalina.sh", "run"]
 #Port
 EXPOSE 8080
 
-# docker build -t migutak/birt:25072022.2 .
+# docker build -t migutak/birt-uat:1.1 .

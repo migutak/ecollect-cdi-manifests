@@ -2,6 +2,23 @@
 apiVersion: v1
 kind: Service
 metadata:
+  name: ecollectedc-nodeport-svc
+  namespace: ecol
+  labels:
+    app: ecollectedc
+spec:
+  selector:
+    app: ecollectedc
+  ports:
+    - protocol: TCP
+      port: 4430
+      name: http
+      nodePort: 32270
+  type: NodePort
+---
+apiVersion: v1
+kind: Service
+metadata:
   name: ecollectedc-svc
 spec:
   selector:
@@ -31,7 +48,7 @@ spec:
     spec:
       containers:
       - name: ecollectedc
-        image: ecollect-registry.co-opbank.co.ke:30388/ecollectedc:4.3.3
+        image: migutak/ecollectedc:4.4.0
         ports:
         - containerPort: 4430
         resources:
