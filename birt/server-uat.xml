@@ -49,7 +49,7 @@
         auth="Container"
         type="javax.sql.DataSource"
         driverClassName="oracle.jdbc.driver.OracleDriver"
-        url="jdbc:oracle:thin:@//copkprdcont3-scan.co-opbank.co.ke:1559/ECOLLECT"
+        url="jdbc:oracle:thin:@//copkdrdutil2-scan.co-opbank.co.ke:1560/ECOLLTST"
         username="ecol"
         password="L#TTc011"
         />

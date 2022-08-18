@@ -25,4 +25,4 @@ CMD ["catalina.sh", "run"]
 #Port
 EXPOSE 8080
 
-# docker build -t migutak/birt-uat:1.1 .
+# docker build -t migutak/birt-uat:1.6 .

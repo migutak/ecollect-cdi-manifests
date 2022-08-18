@@ -1,0 +1,2501 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.9.0.v201905231911</property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="layoutPreference">auto layout</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="Data Source" id="4">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>contentBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledContentBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>disabledMetadataBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>metadataBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+            </list-property>
+            <property name="odaDriverClass">oracle.jdbc.OracleDriver</property>
+            <property name="odaJndiName">java:comp/env/jdbc/ecollect</property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Data Set" id="5">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">ID</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">ID</text-property>
+                    <text-property name="heading">ID</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">REPOID</property>
+                    <text-property name="displayName">REPOID</text-property>
+                    <text-property name="heading">REPOID</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CUSTNUMBER</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">CUSTNUMBER</text-property>
+                    <text-property name="heading">CUSTNUMBER</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">ACCNUMBER</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">ACCNUMBER</text-property>
+                    <text-property name="heading">ACCNUMBER</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CUSTNAME</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">CUSTNAME</text-property>
+                    <text-property name="heading">CUSTNAME</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">EMAILADDRESS</property>
+                    <text-property name="displayName">EMAILADDRESS</text-property>
+                    <text-property name="heading">EMAILADDRESS</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CELNUMBER</property>
+                    <text-property name="displayName">CELNUMBER</text-property>
+                    <text-property name="heading">CELNUMBER</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">POSTALADDRESS</property>
+                    <text-property name="displayName">POSTALADDRESS</text-property>
+                    <text-property name="heading">POSTALADDRESS</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">PLACE</property>
+                    <text-property name="displayName">PLACE</text-property>
+                    <text-property name="heading">PLACE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">AROCODE</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">AROCODE</text-property>
+                    <text-property name="heading">AROCODE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">RROCODE</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">RROCODE</text-property>
+                    <text-property name="heading">RROCODE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">BRANCHCODE</property>
+                    <text-property name="displayName">BRANCHCODE</text-property>
+                    <text-property name="heading">BRANCHCODE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">BRANCHNAME</property>
+                    <text-property name="displayName">BRANCHNAME</text-property>
+                    <text-property name="heading">BRANCHNAME</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">REGION</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">REGION</text-property>
+                    <text-property name="heading">REGION</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">DAYSINARR</property>
+                    <text-property name="displayName">DAYSINARR</text-property>
+                    <text-property name="heading">DAYSINARR</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">ASSETFINANCEBALANCE</property>
+                    <text-property name="displayName">ASSETFINANCEBALANCE</text-property>
+                    <text-property name="heading">ASSETFINANCEBALANCE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">IPFBALANCE</property>
+                    <text-property name="displayName">IPFBALANCE</text-property>
+                    <text-property name="heading">IPFBALANCE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">ODBALANCE</property>
+                    <text-property name="displayName">ODBALANCE</text-property>
+                    <text-property name="heading">ODBALANCE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">OTHERBALANCES</property>
+                    <text-property name="displayName">OTHERBALANCES</text-property>
+                    <text-property name="heading">OTHERBALANCES</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">TOTALAMOUNT</property>
+                    <text-property name="displayName">TOTALAMOUNT</text-property>
+                    <text-property name="heading">TOTALAMOUNT</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">NEXTSCHEDULEAMOUNT</property>
+                    <text-property name="displayName">NEXTSCHEDULEAMOUNT</text-property>
+                    <text-property name="heading">NEXTSCHEDULEAMOUNT</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">NEXTSCHEDULEDATE</property>
+                    <text-property name="displayName">NEXTSCHEDULEDATE</text-property>
+                    <text-property name="heading">NEXTSCHEDULEDATE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">TRACKINGCOMPANY</property>
+                    <text-property name="displayName">TRACKINGCOMPANY</text-property>
+                    <text-property name="heading">TRACKINGCOMPANY</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">NATIONALID</property>
+                    <text-property name="displayName">NATIONALID</text-property>
+                    <text-property name="heading">NATIONALID</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">PURPOSEOFVEHICLE</property>
+                    <text-property name="displayName">PURPOSEOFVEHICLE</text-property>
+                    <text-property name="heading">PURPOSEOFVEHICLE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">VEHICLEMAKE</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">VEHICLEMAKE</text-property>
+                    <text-property name="heading">VEHICLEMAKE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">VEHICLEMODEL</property>
+                    <text-property name="displayName">VEHICLEMODEL</text-property>
+                    <text-property name="heading">VEHICLEMODEL</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">DATEOFREQUEST</property>
+                    <text-property name="displayName">DATEOFREQUEST</text-property>
+                    <text-property name="heading">DATEOFREQUEST</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CHASSISNUMBER</property>
+                    <text-property name="displayName">CHASSISNUMBER</text-property>
+                    <text-property name="heading">CHASSISNUMBER</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">ENGINENO</property>
+                    <text-property name="displayName">ENGINENO</text-property>
+                    <text-property name="heading">ENGINENO</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">VEHICLEREGNO</property>
+                    <text-property name="displayName">VEHICLEREGNO</text-property>
+                    <text-property name="heading">VEHICLEREGNO</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">TYPEOFBUSINESS</property>
+                    <text-property name="displayName">TYPEOFBUSINESS</text-property>
+                    <text-property name="heading">TYPEOFBUSINESS</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">GUARANTORS</property>
+                    <text-property name="displayName">GUARANTORS</text-property>
+                    <text-property name="heading">GUARANTORS</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">GUARANTORSADDRESS</property>
+                    <text-property name="displayName">GUARANTORSADDRESS</text-property>
+                    <text-property name="heading">GUARANTORSADDRESS</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">ANYOTHERINFO</property>
+                    <text-property name="displayName">ANYOTHERINFO</text-property>
+                    <text-property name="heading">ANYOTHERINFO</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">APPROVAL</property>
+                    <text-property name="displayName">APPROVAL</text-property>
+                    <text-property name="heading">APPROVAL</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">DATEOFAPPROVAL</property>
+                    <text-property name="displayName">DATEOFAPPROVAL</text-property>
+                    <text-property name="heading">DATEOFAPPROVAL</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">APPROVEDBY</property>
+                    <text-property name="displayName">APPROVEDBY</text-property>
+                    <text-property name="heading">APPROVEDBY</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">APPROVALCOMMENT</property>
+                    <text-property name="displayName">APPROVALCOMMENT</text-property>
+                    <text-property name="heading">APPROVALCOMMENT</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">AUCTIONEERCONTACT</property>
+                    <text-property name="displayName">AUCTIONEERCONTACT</text-property>
+                    <text-property name="heading">AUCTIONEERCONTACT</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">AUCTIONEEREMAIL</property>
+                    <text-property name="displayName">AUCTIONEEREMAIL</text-property>
+                    <text-property name="heading">AUCTIONEEREMAIL</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">AUCTIONEERNAME</property>
+                    <text-property name="displayName">AUCTIONEERNAME</text-property>
+                    <text-property name="heading">AUCTIONEERNAME</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">AUCTIONEERTEL</property>
+                    <text-property name="displayName">AUCTIONEERTEL</text-property>
+                    <text-property name="heading">AUCTIONEERTEL</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">DATEREPOISSUED</property>
+                    <text-property name="displayName">DATEREPOISSUED</text-property>
+                    <text-property name="heading">DATEREPOISSUED</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">EXPIRYDATE</property>
+                    <text-property name="displayName">EXPIRYDATE</text-property>
+                    <text-property name="heading">EXPIRYDATE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">REPOSSESSIONORDERFORM</property>
+                    <text-property name="displayName">REPOSSESSIONORDERFORM</text-property>
+                    <text-property name="heading">REPOSSESSIONORDERFORM</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">EXT</property>
+                    <text-property name="displayName">EXT</text-property>
+                    <text-property name="heading">EXT</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">EXTDATE</property>
+                    <text-property name="displayName">EXTDATE</text-property>
+                    <text-property name="heading">EXTDATE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">NOOFDAYSEXT</property>
+                    <text-property name="displayName">NOOFDAYSEXT</text-property>
+                    <text-property name="heading">NOOFDAYSEXT</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">EXTDUEDATE</property>
+                    <text-property name="displayName">EXTDUEDATE</text-property>
+                    <text-property name="heading">EXTDUEDATE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">OWNER</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">OWNER</text-property>
+                    <text-property name="heading">OWNER</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">STAGEDATE</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">STAGEDATE</text-property>
+                    <text-property name="heading">STAGEDATE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">REPOSTATUS</property>
+                    <text-property name="displayName">REPOSTATUS</text-property>
+                    <text-property name="heading">REPOSTATUS</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">SERVICEPROVIDER</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">SERVICEPROVIDER</text-property>
+                    <text-property name="heading">SERVICEPROVIDER</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">DATEREPOSSESSED</property>
+                    <text-property name="displayName">DATEREPOSSESSED</text-property>
+                    <text-property name="heading">DATEREPOSSESSED</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">DATECANCELLED</property>
+                    <text-property name="displayName">DATECANCELLED</text-property>
+                    <text-property name="heading">DATECANCELLED</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">CANCELCOMMENT</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">CANCELCOMMENT</text-property>
+                    <text-property name="heading">CANCELCOMMENT</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">YARDNAME</property>
+                    <text-property name="displayName">YARDNAME</text-property>
+                    <text-property name="heading">YARDNAME</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">YARDENTRYDATE</property>
+                    <text-property name="displayName">YARDENTRYDATE</text-property>
+                    <text-property name="heading">YARDENTRYDATE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">YARDEXITDATE</property>
+                    <text-property name="displayName">YARDEXITDATE</text-property>
+                    <text-property name="heading">YARDEXITDATE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">YARDBOOKINGFORM</property>
+                    <text-property name="displayName">YARDBOOKINGFORM</text-property>
+                    <text-property name="heading">YARDBOOKINGFORM</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">YARDCHARGES</property>
+                    <text-property name="displayName">YARDCHARGES</text-property>
+                    <text-property name="heading">YARDCHARGES</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">ISCASEACTIVE</property>
+                    <text-property name="displayName">ISCASEACTIVE</text-property>
+                    <text-property name="heading">ISCASEACTIVE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">DEMAND</property>
+                    <text-property name="displayName">DEMAND</text-property>
+                    <text-property name="heading">DEMAND</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">DATEBOOKEDINYARD</property>
+                    <text-property name="displayName">DATEBOOKEDINYARD</text-property>
+                    <text-property name="heading">DATEBOOKEDINYARD</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">BOOKINGFORM</property>
+                    <text-property name="displayName">BOOKINGFORM</text-property>
+                    <text-property name="heading">BOOKINGFORM</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">STORAGEYARD</property>
+                    <text-property name="displayName">STORAGEYARD</text-property>
+                    <text-property name="heading">STORAGEYARD</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">VEHICLERELEASED</property>
+                    <text-property name="displayName">VEHICLERELEASED</text-property>
+                    <text-property name="heading">VEHICLERELEASED</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">DATERELEASED</property>
+                    <text-property name="displayName">DATERELEASED</text-property>
+                    <text-property name="heading">DATERELEASED</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">FOLLOWUPCOMMENT</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">FOLLOWUPCOMMENT</text-property>
+                    <text-property name="heading">FOLLOWUPCOMMENT</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">RELEASEFORM</property>
+                    <text-property name="displayName">RELEASEFORM</text-property>
+                    <text-property name="heading">RELEASEFORM</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">ASSETFAGGNUM</property>
+                    <text-property name="displayName">ASSETFAGGNUM</text-property>
+                    <text-property name="heading">ASSETFAGGNUM</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">RMTELNUMBER</property>
+                    <text-property name="displayName">RMTELNUMBER</text-property>
+                    <text-property name="heading">RMTELNUMBER</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">RMEMAIL</property>
+                    <text-property name="displayName">RMEMAIL</text-property>
+                    <text-property name="heading">RMEMAIL</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">RMNAME</property>
+                    <text-property name="displayName">RMNAME</text-property>
+                    <text-property name="heading">RMNAME</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">REPOSTATUS2</property>
+                    <text-property name="displayName">REPOSTATUS2</text-property>
+                    <text-property name="heading">REPOSTATUS2</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">VALUATION_STATUS</property>
+                    <text-property name="displayName">VALUATION_STATUS</text-property>
+                    <text-property name="heading">VALUATION_STATUS</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">VALUATION_DATEASSIGNED</property>
+                    <text-property name="displayName">VALUATION_DATEASSIGNED</text-property>
+                    <text-property name="heading">VALUATION_DATEASSIGNED</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">VALUATION_DUEDATE</property>
+                    <text-property name="displayName">VALUATION_DUEDATE</text-property>
+                    <text-property name="heading">VALUATION_DUEDATE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">VALUATION_FOLLOWUP</property>
+                    <text-property name="displayName">VALUATION_FOLLOWUP</text-property>
+                    <text-property name="heading">VALUATION_FOLLOWUP</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">VALUATION_REPORT</property>
+                    <text-property name="displayName">VALUATION_REPORT</text-property>
+                    <text-property name="heading">VALUATION_REPORT</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">VALUATION_OMV</property>
+                    <text-property name="displayName">VALUATION_OMV</text-property>
+                    <text-property name="heading">VALUATION_OMV</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">VALUATION_COMPLETE</property>
+                    <text-property name="displayName">VALUATION_COMPLETE</text-property>
+                    <text-property name="heading">VALUATION_COMPLETE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">MARKETER_STATUS</property>
+                    <text-property name="displayName">MARKETER_STATUS</text-property>
+                    <text-property name="heading">MARKETER_STATUS</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">MARKETER_SP</property>
+                    <text-property name="displayName">MARKETER_SP</text-property>
+                    <text-property name="heading">MARKETER_SP</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">MARKETER_COMPLETE</property>
+                    <text-property name="displayName">MARKETER_COMPLETE</text-property>
+                    <text-property name="heading">MARKETER_COMPLETE</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">MARKETER_DATEASSIGNED</property>
+                    <text-property name="displayName">MARKETER_DATEASSIGNED</text-property>
+                    <text-property name="heading">MARKETER_DATEASSIGNED</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">MARKETER_DATECOMPLETED</property>
+                    <text-property name="displayName">MARKETER_DATECOMPLETED</text-property>
+                    <text-property name="heading">MARKETER_DATECOMPLETED</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">VALUATION_FSV</property>
+                    <text-property name="displayName">VALUATION_FSV</text-property>
+                    <text-property name="heading">VALUATION_FSV</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">VALUATION_SP</property>
+                    <text-property name="displayName">VALUATION_SP</text-property>
+                    <text-property name="heading">VALUATION_SP</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">YARD_STATUS</property>
+                    <text-property name="displayName">YARD_STATUS</text-property>
+                    <text-property name="heading">YARD_STATUS</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">YARD_FOLLOWUP</property>
+                    <text-property name="displayName">YARD_FOLLOWUP</text-property>
+                    <text-property name="heading">YARD_FOLLOWUP</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">ID</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">REPOID</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">CUSTNUMBER</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">4</property>
+                        <property name="name">ACCNUMBER</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">5</property>
+                        <property name="name">CUSTNAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">6</property>
+                        <property name="name">EMAILADDRESS</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">7</property>
+                        <property name="name">CELNUMBER</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">8</property>
+                        <property name="name">POSTALADDRESS</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">9</property>
+                        <property name="name">PLACE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">10</property>
+                        <property name="name">AROCODE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">11</property>
+                        <property name="name">RROCODE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">12</property>
+                        <property name="name">BRANCHCODE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">13</property>
+                        <property name="name">BRANCHNAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">14</property>
+                        <property name="name">REGION</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">15</property>
+                        <property name="name">DAYSINARR</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">16</property>
+                        <property name="name">ASSETFINANCEBALANCE</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">17</property>
+                        <property name="name">IPFBALANCE</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">18</property>
+                        <property name="name">ODBALANCE</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">19</property>
+                        <property name="name">OTHERBALANCES</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">20</property>
+                        <property name="name">TOTALAMOUNT</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">21</property>
+                        <property name="name">NEXTSCHEDULEAMOUNT</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">22</property>
+                        <property name="name">NEXTSCHEDULEDATE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">23</property>
+                        <property name="name">TRACKINGCOMPANY</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">24</property>
+                        <property name="name">NATIONALID</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">25</property>
+                        <property name="name">PURPOSEOFVEHICLE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">26</property>
+                        <property name="name">VEHICLEMAKE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">27</property>
+                        <property name="name">VEHICLEMODEL</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">28</property>
+                        <property name="name">DATEOFREQUEST</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">29</property>
+                        <property name="name">CHASSISNUMBER</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">30</property>
+                        <property name="name">ENGINENO</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">31</property>
+                        <property name="name">VEHICLEREGNO</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">32</property>
+                        <property name="name">TYPEOFBUSINESS</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">33</property>
+                        <property name="name">GUARANTORS</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">34</property>
+                        <property name="name">GUARANTORSADDRESS</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">35</property>
+                        <property name="name">ANYOTHERINFO</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">36</property>
+                        <property name="name">APPROVAL</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">37</property>
+                        <property name="name">DATEOFAPPROVAL</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">38</property>
+                        <property name="name">APPROVEDBY</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">39</property>
+                        <property name="name">APPROVALCOMMENT</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">40</property>
+                        <property name="name">AUCTIONEERCONTACT</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">41</property>
+                        <property name="name">AUCTIONEEREMAIL</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">42</property>
+                        <property name="name">AUCTIONEERNAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">43</property>
+                        <property name="name">AUCTIONEERTEL</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">44</property>
+                        <property name="name">DATEREPOISSUED</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">45</property>
+                        <property name="name">EXPIRYDATE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">46</property>
+                        <property name="name">REPOSSESSIONORDERFORM</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">47</property>
+                        <property name="name">EXT</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">48</property>
+                        <property name="name">EXTDATE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">49</property>
+                        <property name="name">NOOFDAYSEXT</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">50</property>
+                        <property name="name">EXTDUEDATE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">51</property>
+                        <property name="name">OWNER</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">52</property>
+                        <property name="name">STAGEDATE</property>
+                        <property name="dataType">date-time</property>
+                    </structure>
+                    <structure>
+                        <property name="position">53</property>
+                        <property name="name">REPOSTATUS</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">54</property>
+                        <property name="name">SERVICEPROVIDER</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">55</property>
+                        <property name="name">DATEREPOSSESSED</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">56</property>
+                        <property name="name">DATECANCELLED</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">57</property>
+                        <property name="name">CANCELCOMMENT</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">58</property>
+                        <property name="name">YARDNAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">59</property>
+                        <property name="name">YARDENTRYDATE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">60</property>
+                        <property name="name">YARDEXITDATE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">61</property>
+                        <property name="name">YARDBOOKINGFORM</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">62</property>
+                        <property name="name">YARDCHARGES</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">63</property>
+                        <property name="name">ISCASEACTIVE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">64</property>
+                        <property name="name">DEMAND</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">65</property>
+                        <property name="name">DATEBOOKEDINYARD</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">66</property>
+                        <property name="name">BOOKINGFORM</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">67</property>
+                        <property name="name">STORAGEYARD</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">68</property>
+                        <property name="name">VEHICLERELEASED</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">69</property>
+                        <property name="name">DATERELEASED</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">70</property>
+                        <property name="name">FOLLOWUPCOMMENT</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">71</property>
+                        <property name="name">RELEASEFORM</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">72</property>
+                        <property name="name">ASSETFAGGNUM</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">73</property>
+                        <property name="name">RMTELNUMBER</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">74</property>
+                        <property name="name">RMEMAIL</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">75</property>
+                        <property name="name">RMNAME</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">76</property>
+                        <property name="name">REPOSTATUS2</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">77</property>
+                        <property name="name">VALUATION_STATUS</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">78</property>
+                        <property name="name">VALUATION_DATEASSIGNED</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">79</property>
+                        <property name="name">VALUATION_DUEDATE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">80</property>
+                        <property name="name">VALUATION_FOLLOWUP</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">81</property>
+                        <property name="name">VALUATION_REPORT</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">82</property>
+                        <property name="name">VALUATION_OMV</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">83</property>
+                        <property name="name">VALUATION_COMPLETE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">84</property>
+                        <property name="name">MARKETER_STATUS</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">85</property>
+                        <property name="name">MARKETER_SP</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">86</property>
+                        <property name="name">MARKETER_COMPLETE</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">87</property>
+                        <property name="name">MARKETER_DATEASSIGNED</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">88</property>
+                        <property name="name">MARKETER_DATECOMPLETED</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">89</property>
+                        <property name="name">VALUATION_FSV</property>
+                        <property name="dataType">decimal</property>
+                    </structure>
+                    <structure>
+                        <property name="position">90</property>
+                        <property name="name">VALUATION_SP</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">91</property>
+                        <property name="name">YARD_STATUS</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">92</property>
+                        <property name="name">YARD_FOLLOWUP</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">ID</property>
+                    <property name="nativeName">ID</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">2</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">REPOID</property>
+                    <property name="nativeName">REPOID</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">CUSTNUMBER</property>
+                    <property name="nativeName">CUSTNUMBER</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">4</property>
+                    <property name="name">ACCNUMBER</property>
+                    <property name="nativeName">ACCNUMBER</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">5</property>
+                    <property name="name">CUSTNAME</property>
+                    <property name="nativeName">CUSTNAME</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">6</property>
+                    <property name="name">EMAILADDRESS</property>
+                    <property name="nativeName">EMAILADDRESS</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">7</property>
+                    <property name="name">CELNUMBER</property>
+                    <property name="nativeName">CELNUMBER</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">8</property>
+                    <property name="name">POSTALADDRESS</property>
+                    <property name="nativeName">POSTALADDRESS</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">9</property>
+                    <property name="name">PLACE</property>
+                    <property name="nativeName">PLACE</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">10</property>
+                    <property name="name">AROCODE</property>
+                    <property name="nativeName">AROCODE</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">11</property>
+                    <property name="name">RROCODE</property>
+                    <property name="nativeName">RROCODE</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">12</property>
+                    <property name="name">BRANCHCODE</property>
+                    <property name="nativeName">BRANCHCODE</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">13</property>
+                    <property name="name">BRANCHNAME</property>
+                    <property name="nativeName">BRANCHNAME</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">14</property>
+                    <property name="name">REGION</property>
+                    <property name="nativeName">REGION</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">15</property>
+                    <property name="name">DAYSINARR</property>
+                    <property name="nativeName">DAYSINARR</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">2</property>
+                </structure>
+                <structure>
+                    <property name="position">16</property>
+                    <property name="name">ASSETFINANCEBALANCE</property>
+                    <property name="nativeName">ASSETFINANCEBALANCE</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">2</property>
+                </structure>
+                <structure>
+                    <property name="position">17</property>
+                    <property name="name">IPFBALANCE</property>
+                    <property name="nativeName">IPFBALANCE</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">2</property>
+                </structure>
+                <structure>
+                    <property name="position">18</property>
+                    <property name="name">ODBALANCE</property>
+                    <property name="nativeName">ODBALANCE</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">2</property>
+                </structure>
+                <structure>
+                    <property name="position">19</property>
+                    <property name="name">OTHERBALANCES</property>
+                    <property name="nativeName">OTHERBALANCES</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">2</property>
+                </structure>
+                <structure>
+                    <property name="position">20</property>
+                    <property name="name">TOTALAMOUNT</property>
+                    <property name="nativeName">TOTALAMOUNT</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">2</property>
+                </structure>
+                <structure>
+                    <property name="position">21</property>
+                    <property name="name">NEXTSCHEDULEAMOUNT</property>
+                    <property name="nativeName">NEXTSCHEDULEAMOUNT</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">2</property>
+                </structure>
+                <structure>
+                    <property name="position">22</property>
+                    <property name="name">NEXTSCHEDULEDATE</property>
+                    <property name="nativeName">NEXTSCHEDULEDATE</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">23</property>
+                    <property name="name">TRACKINGCOMPANY</property>
+                    <property name="nativeName">TRACKINGCOMPANY</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">24</property>
+                    <property name="name">NATIONALID</property>
+                    <property name="nativeName">NATIONALID</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">25</property>
+                    <property name="name">PURPOSEOFVEHICLE</property>
+                    <property name="nativeName">PURPOSEOFVEHICLE</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">26</property>
+                    <property name="name">VEHICLEMAKE</property>
+                    <property name="nativeName">VEHICLEMAKE</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">27</property>
+                    <property name="name">VEHICLEMODEL</property>
+                    <property name="nativeName">VEHICLEMODEL</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">28</property>
+                    <property name="name">DATEOFREQUEST</property>
+                    <property name="nativeName">DATEOFREQUEST</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">29</property>
+                    <property name="name">CHASSISNUMBER</property>
+                    <property name="nativeName">CHASSISNUMBER</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">30</property>
+                    <property name="name">ENGINENO</property>
+                    <property name="nativeName">ENGINENO</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">31</property>
+                    <property name="name">VEHICLEREGNO</property>
+                    <property name="nativeName">VEHICLEREGNO</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">32</property>
+                    <property name="name">TYPEOFBUSINESS</property>
+                    <property name="nativeName">TYPEOFBUSINESS</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">33</property>
+                    <property name="name">GUARANTORS</property>
+                    <property name="nativeName">GUARANTORS</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">34</property>
+                    <property name="name">GUARANTORSADDRESS</property>
+                    <property name="nativeName">GUARANTORSADDRESS</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">35</property>
+                    <property name="name">ANYOTHERINFO</property>
+                    <property name="nativeName">ANYOTHERINFO</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">36</property>
+                    <property name="name">APPROVAL</property>
+                    <property name="nativeName">APPROVAL</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">37</property>
+                    <property name="name">DATEOFAPPROVAL</property>
+                    <property name="nativeName">DATEOFAPPROVAL</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">38</property>
+                    <property name="name">APPROVEDBY</property>
+                    <property name="nativeName">APPROVEDBY</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">39</property>
+                    <property name="name">APPROVALCOMMENT</property>
+                    <property name="nativeName">APPROVALCOMMENT</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">40</property>
+                    <property name="name">AUCTIONEERCONTACT</property>
+                    <property name="nativeName">AUCTIONEERCONTACT</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">41</property>
+                    <property name="name">AUCTIONEEREMAIL</property>
+                    <property name="nativeName">AUCTIONEEREMAIL</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">42</property>
+                    <property name="name">AUCTIONEERNAME</property>
+                    <property name="nativeName">AUCTIONEERNAME</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">43</property>
+                    <property name="name">AUCTIONEERTEL</property>
+                    <property name="nativeName">AUCTIONEERTEL</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">44</property>
+                    <property name="name">DATEREPOISSUED</property>
+                    <property name="nativeName">DATEREPOISSUED</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">45</property>
+                    <property name="name">EXPIRYDATE</property>
+                    <property name="nativeName">EXPIRYDATE</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">46</property>
+                    <property name="name">REPOSSESSIONORDERFORM</property>
+                    <property name="nativeName">REPOSSESSIONORDERFORM</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">47</property>
+                    <property name="name">EXT</property>
+                    <property name="nativeName">EXT</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">48</property>
+                    <property name="name">EXTDATE</property>
+                    <property name="nativeName">EXTDATE</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">49</property>
+                    <property name="name">NOOFDAYSEXT</property>
+                    <property name="nativeName">NOOFDAYSEXT</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">2</property>
+                </structure>
+                <structure>
+                    <property name="position">50</property>
+                    <property name="name">EXTDUEDATE</property>
+                    <property name="nativeName">EXTDUEDATE</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">51</property>
+                    <property name="name">OWNER</property>
+                    <property name="nativeName">OWNER</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">52</property>
+                    <property name="name">STAGEDATE</property>
+                    <property name="nativeName">STAGEDATE</property>
+                    <property name="dataType">date-time</property>
+                    <property name="nativeDataType">93</property>
+                </structure>
+                <structure>
+                    <property name="position">53</property>
+                    <property name="name">REPOSTATUS</property>
+                    <property name="nativeName">REPOSTATUS</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">54</property>
+                    <property name="name">SERVICEPROVIDER</property>
+                    <property name="nativeName">SERVICEPROVIDER</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">55</property>
+                    <property name="name">DATEREPOSSESSED</property>
+                    <property name="nativeName">DATEREPOSSESSED</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">56</property>
+                    <property name="name">DATECANCELLED</property>
+                    <property name="nativeName">DATECANCELLED</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">57</property>
+                    <property name="name">CANCELCOMMENT</property>
+                    <property name="nativeName">CANCELCOMMENT</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">58</property>
+                    <property name="name">YARDNAME</property>
+                    <property name="nativeName">YARDNAME</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">59</property>
+                    <property name="name">YARDENTRYDATE</property>
+                    <property name="nativeName">YARDENTRYDATE</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">60</property>
+                    <property name="name">YARDEXITDATE</property>
+                    <property name="nativeName">YARDEXITDATE</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">61</property>
+                    <property name="name">YARDBOOKINGFORM</property>
+                    <property name="nativeName">YARDBOOKINGFORM</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">62</property>
+                    <property name="name">YARDCHARGES</property>
+                    <property name="nativeName">YARDCHARGES</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">2</property>
+                </structure>
+                <structure>
+                    <property name="position">63</property>
+                    <property name="name">ISCASEACTIVE</property>
+                    <property name="nativeName">ISCASEACTIVE</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">64</property>
+                    <property name="name">DEMAND</property>
+                    <property name="nativeName">DEMAND</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">65</property>
+                    <property name="name">DATEBOOKEDINYARD</property>
+                    <property name="nativeName">DATEBOOKEDINYARD</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">66</property>
+                    <property name="name">BOOKINGFORM</property>
+                    <property name="nativeName">BOOKINGFORM</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">67</property>
+                    <property name="name">STORAGEYARD</property>
+                    <property name="nativeName">STORAGEYARD</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">68</property>
+                    <property name="name">VEHICLERELEASED</property>
+                    <property name="nativeName">VEHICLERELEASED</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">69</property>
+                    <property name="name">DATERELEASED</property>
+                    <property name="nativeName">DATERELEASED</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">70</property>
+                    <property name="name">FOLLOWUPCOMMENT</property>
+                    <property name="nativeName">FOLLOWUPCOMMENT</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">71</property>
+                    <property name="name">RELEASEFORM</property>
+                    <property name="nativeName">RELEASEFORM</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">72</property>
+                    <property name="name">ASSETFAGGNUM</property>
+                    <property name="nativeName">ASSETFAGGNUM</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">73</property>
+                    <property name="name">RMTELNUMBER</property>
+                    <property name="nativeName">RMTELNUMBER</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">74</property>
+                    <property name="name">RMEMAIL</property>
+                    <property name="nativeName">RMEMAIL</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">75</property>
+                    <property name="name">RMNAME</property>
+                    <property name="nativeName">RMNAME</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">76</property>
+                    <property name="name">REPOSTATUS2</property>
+                    <property name="nativeName">REPOSTATUS2</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">77</property>
+                    <property name="name">VALUATION_STATUS</property>
+                    <property name="nativeName">VALUATION_STATUS</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">78</property>
+                    <property name="name">VALUATION_DATEASSIGNED</property>
+                    <property name="nativeName">VALUATION_DATEASSIGNED</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">79</property>
+                    <property name="name">VALUATION_DUEDATE</property>
+                    <property name="nativeName">VALUATION_DUEDATE</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">80</property>
+                    <property name="name">VALUATION_FOLLOWUP</property>
+                    <property name="nativeName">VALUATION_FOLLOWUP</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">81</property>
+                    <property name="name">VALUATION_REPORT</property>
+                    <property name="nativeName">VALUATION_REPORT</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">82</property>
+                    <property name="name">VALUATION_OMV</property>
+                    <property name="nativeName">VALUATION_OMV</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">2</property>
+                </structure>
+                <structure>
+                    <property name="position">83</property>
+                    <property name="name">VALUATION_COMPLETE</property>
+                    <property name="nativeName">VALUATION_COMPLETE</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">84</property>
+                    <property name="name">MARKETER_STATUS</property>
+                    <property name="nativeName">MARKETER_STATUS</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">85</property>
+                    <property name="name">MARKETER_SP</property>
+                    <property name="nativeName">MARKETER_SP</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">86</property>
+                    <property name="name">MARKETER_COMPLETE</property>
+                    <property name="nativeName">MARKETER_COMPLETE</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">87</property>
+                    <property name="name">MARKETER_DATEASSIGNED</property>
+                    <property name="nativeName">MARKETER_DATEASSIGNED</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">88</property>
+                    <property name="name">MARKETER_DATECOMPLETED</property>
+                    <property name="nativeName">MARKETER_DATECOMPLETED</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">89</property>
+                    <property name="name">VALUATION_FSV</property>
+                    <property name="nativeName">VALUATION_FSV</property>
+                    <property name="dataType">decimal</property>
+                    <property name="nativeDataType">2</property>
+                </structure>
+                <structure>
+                    <property name="position">90</property>
+                    <property name="name">VALUATION_SP</property>
+                    <property name="nativeName">VALUATION_SP</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">91</property>
+                    <property name="name">YARD_STATUS</property>
+                    <property name="nativeName">YARD_STATUS</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">92</property>
+                    <property name="name">YARD_FOLLOWUP</property>
+                    <property name="nativeName">YARD_FOLLOWUP</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select *
+from tblrepossessions]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>ID</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>2</design:nativeDataTypeCode>
+            <design:precision>22</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>NotNullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>ID</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>ID</design:label>
+            <design:formattingHints>
+              <design:displaySize>23</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>CUSTNUMBER</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>500</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>CUSTNUMBER</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>CUSTNUMBER</design:label>
+            <design:formattingHints>
+              <design:displaySize>500</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>ACCNUMBER</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>500</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>ACCNUMBER</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>ACCNUMBER</design:label>
+            <design:formattingHints>
+              <design:displaySize>500</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>CUSTNAME</design:name>
+              <design:position>4</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>500</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>CUSTNAME</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>CUSTNAME</design:label>
+            <design:formattingHints>
+              <design:displaySize>500</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>AROCODE</design:name>
+              <design:position>5</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>500</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>AROCODE</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>AROCODE</design:label>
+            <design:formattingHints>
+              <design:displaySize>500</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>FILENO</design:name>
+              <design:position>6</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>500</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>FILENO</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>FILENO</design:label>
+            <design:formattingHints>
+              <design:displaySize>500</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>PROPERTYNO</design:name>
+              <design:position>7</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>500</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>PROPERTYNO</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>PROPERTYNO</design:label>
+            <design:formattingHints>
+              <design:displaySize>500</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>ACCBALANCE</design:name>
+              <design:position>8</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>500</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>ACCBALANCE</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>ACCBALANCE</design:label>
+            <design:formattingHints>
+              <design:displaySize>500</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>OWNERSHIP</design:name>
+              <design:position>9</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>500</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>OWNERSHIP</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>OWNERSHIP</design:label>
+            <design:formattingHints>
+              <design:displaySize>500</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>VEHICLEMAKE</design:name>
+              <design:position>10</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>500</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>VEHICLEMAKE</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>VEHICLEMAKE</design:label>
+            <design:formattingHints>
+              <design:displaySize>500</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>DATEINPUT</design:name>
+              <design:position>11</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>500</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>DATEINPUT</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>DATEINPUT</design:label>
+            <design:formattingHints>
+              <design:displaySize>500</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>OWNER</design:name>
+              <design:position>12</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>500</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>OWNER</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>OWNER</design:label>
+            <design:formattingHints>
+              <design:displaySize>500</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>STAGEDATE</design:name>
+              <design:position>13</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>93</design:nativeDataTypeCode>
+            <design:precision>0</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>STAGEDATE</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>STAGEDATE</design:label>
+            <design:formattingHints>
+              <design:displaySize>7</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>NEWSTATUS</design:name>
+              <design:position>14</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>500</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>NEWSTATUS</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>NEWSTATUS</design:label>
+            <design:formattingHints>
+              <design:displaySize>500</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>CANCELCOMMENT</design:name>
+              <design:position>15</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>500</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>CANCELCOMMENT</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>CANCELCOMMENT</design:label>
+            <design:formattingHints>
+              <design:displaySize>500</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>REGOWNER</design:name>
+              <design:position>16</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>500</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>REGOWNER</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>REGOWNER</design:label>
+            <design:formattingHints>
+              <design:displaySize>500</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>NATIONID</design:name>
+              <design:position>17</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>100</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>NATIONID</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>NATIONID</design:label>
+            <design:formattingHints>
+              <design:displaySize>100</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>RROCODE</design:name>
+              <design:position>18</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>100</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>RROCODE</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>RROCODE</design:label>
+            <design:formattingHints>
+              <design:displaySize>100</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>LOANSETTLEMENTACC</design:name>
+              <design:position>19</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>100</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>LOANSETTLEMENTACC</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>LOANSETTLEMENTACC</design:label>
+            <design:formattingHints>
+              <design:displaySize>100</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>ADDRESS</design:name>
+              <design:position>20</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>100</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>ADDRESS</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>ADDRESS</design:label>
+            <design:formattingHints>
+              <design:displaySize>100</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>REGION</design:name>
+              <design:position>21</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>100</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>REGION</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>REGION</design:label>
+            <design:formattingHints>
+              <design:displaySize>100</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>DATEASSIGNED</design:name>
+              <design:position>22</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>100</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>DATEASSIGNED</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>DATEASSIGNED</design:label>
+            <design:formattingHints>
+              <design:displaySize>100</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>FOLLOWUPCOMMENT</design:name>
+              <design:position>23</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>100</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>FOLLOWUPCOMMENT</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>FOLLOWUPCOMMENT</design:label>
+            <design:formattingHints>
+              <design:displaySize>100</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>DUEDATE</design:name>
+              <design:position>24</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>100</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>DUEDATE</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>DUEDATE</design:label>
+            <design:formattingHints>
+              <design:displaySize>100</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>SERVICEPROVIDER</design:name>
+              <design:position>25</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>100</design:precision>
+            <design:scale>0</design:scale>
+            <design:nullability>Nullable</design:nullability>
+            <design:uiHints>
+              <design:displayName>SERVICEPROVIDER</design:displayName>
+            </design:uiHints>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>SERVICEPROVIDER</design:label>
+            <design:formattingHints>
+              <design:displaySize>100</design:displaySize>
+            </design:formattingHints>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <label id="310">
+            <property name="fontSize">medium</property>
+            <property name="fontWeight">bold</property>
+            <text-property name="text">REPOSSESSION ORDER REPORT</text-property>
+        </label>
+        <table id="148">
+            <property name="textAlign">left</property>
+            <property name="dataSet">Data Set</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">CUSTNUMBER</property>
+                    <text-property name="displayName">CUSTNUMBER</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["CUSTNUMBER"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">ACCNUMBER</property>
+                    <text-property name="displayName">ACCNUMBER</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["ACCNUMBER"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">CUSTNAME</property>
+                    <text-property name="displayName">CUSTNAME</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["CUSTNAME"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">AROCODE</property>
+                    <text-property name="displayName">AROCODE</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["AROCODE"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">RROCODE</property>
+                    <text-property name="displayName">RROCODE</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["RROCODE"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">BRANCHCODE</property>
+                    <text-property name="displayName">BRANCHCODE</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["BRANCHCODE"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">BRANCHNAME</property>
+                    <text-property name="displayName">BRANCHNAME</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["BRANCHNAME"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">REGION</property>
+                    <text-property name="displayName">REGION</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["REGION"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">VEHICLEREGNO</property>
+                    <text-property name="displayName">VEHICLEREGNO</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["VEHICLEREGNO"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">AUCTIONEERNAME</property>
+                    <text-property name="displayName">AUCTIONEERNAME</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["AUCTIONEERNAME"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">DATEREPOISSUED</property>
+                    <text-property name="displayName">DATEREPOISSUED</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["DATEREPOISSUED"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">EXPIRYDATE</property>
+                    <text-property name="displayName">EXPIRYDATE</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["EXPIRYDATE"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">REPOSTATUS</property>
+                    <text-property name="displayName">REPOSTATUS</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["REPOSTATUS"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">REPOSTATUS2</property>
+                    <text-property name="displayName">REPOSTATUS2</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["REPOSTATUS2"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">VALUATION_STATUS</property>
+                    <text-property name="displayName">VALUATION_STATUS</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["VALUATION_STATUS"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">MARKETER_STATUS</property>
+                    <text-property name="displayName">MARKETER_STATUS</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["MARKETER_STATUS"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">YARD_STATUS</property>
+                    <text-property name="displayName">YARD_STATUS</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["YARD_STATUS"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <column id="237"/>
+            <column id="238"/>
+            <column id="239"/>
+            <column id="240"/>
+            <column id="241"/>
+            <column id="242"/>
+            <column id="243"/>
+            <column id="244"/>
+            <column id="245"/>
+            <column id="246"/>
+            <column id="247"/>
+            <column id="248"/>
+            <column id="249"/>
+            <column id="250"/>
+            <column id="251"/>
+            <column id="252"/>
+            <column id="253"/>
+            <header>
+                <row id="149">
+                    <cell id="150">
+                        <label id="151">
+                            <text-property name="text">CUSTNUMBER</text-property>
+                        </label>
+                    </cell>
+                    <cell id="152">
+                        <label id="153">
+                            <text-property name="text">ACCNUMBER</text-property>
+                        </label>
+                    </cell>
+                    <cell id="154">
+                        <label id="155">
+                            <text-property name="text">CUSTNAME</text-property>
+                        </label>
+                    </cell>
+                    <cell id="156">
+                        <label id="157">
+                            <text-property name="text">AROCODE</text-property>
+                        </label>
+                    </cell>
+                    <cell id="158">
+                        <label id="159">
+                            <text-property name="text">RROCODE</text-property>
+                        </label>
+                    </cell>
+                    <cell id="160">
+                        <label id="161">
+                            <text-property name="text">BRANCHCODE</text-property>
+                        </label>
+                    </cell>
+                    <cell id="162">
+                        <label id="163">
+                            <text-property name="text">BRANCHNAME</text-property>
+                        </label>
+                    </cell>
+                    <cell id="164">
+                        <label id="165">
+                            <text-property name="text">REGION</text-property>
+                        </label>
+                    </cell>
+                    <cell id="166">
+                        <label id="167">
+                            <text-property name="text">VEHICLEREGNO</text-property>
+                        </label>
+                    </cell>
+                    <cell id="168">
+                        <label id="169">
+                            <text-property name="text">AUCTIONEERNAME</text-property>
+                        </label>
+                    </cell>
+                    <cell id="170">
+                        <label id="171">
+                            <text-property name="text">DATEREPOISSUED</text-property>
+                        </label>
+                    </cell>
+                    <cell id="172">
+                        <label id="173">
+                            <text-property name="text">EXPIRYDATE</text-property>
+                        </label>
+                    </cell>
+                    <cell id="174">
+                        <label id="175">
+                            <text-property name="text">REPOSTATUS</text-property>
+                        </label>
+                    </cell>
+                    <cell id="176">
+                        <label id="177">
+                            <text-property name="text">REPOSTATUS2</text-property>
+                        </label>
+                    </cell>
+                    <cell id="178">
+                        <label id="179">
+                            <text-property name="text">VALUATION_STATUS</text-property>
+                        </label>
+                    </cell>
+                    <cell id="180">
+                        <label id="181">
+                            <text-property name="text">MARKETER_STATUS</text-property>
+                        </label>
+                    </cell>
+                    <cell id="182">
+                        <label id="183">
+                            <text-property name="text">YARD_STATUS</text-property>
+                        </label>
+                    </cell>
+                </row>
+            </header>
+            <detail>
+                <row id="184">
+                    <cell id="185">
+                        <data id="186">
+                            <property name="resultSetColumn">CUSTNUMBER</property>
+                        </data>
+                    </cell>
+                    <cell id="187">
+                        <data id="188">
+                            <property name="resultSetColumn">ACCNUMBER</property>
+                        </data>
+                    </cell>
+                    <cell id="189">
+                        <data id="190">
+                            <property name="resultSetColumn">CUSTNAME</property>
+                        </data>
+                    </cell>
+                    <cell id="191">
+                        <data id="192">
+                            <property name="resultSetColumn">AROCODE</property>
+                        </data>
+                    </cell>
+                    <cell id="193">
+                        <data id="194">
+                            <property name="resultSetColumn">RROCODE</property>
+                        </data>
+                    </cell>
+                    <cell id="195">
+                        <data id="196">
+                            <property name="resultSetColumn">BRANCHCODE</property>
+                        </data>
+                    </cell>
+                    <cell id="197">
+                        <data id="198">
+                            <property name="resultSetColumn">BRANCHNAME</property>
+                        </data>
+                    </cell>
+                    <cell id="199">
+                        <data id="200">
+                            <property name="resultSetColumn">REGION</property>
+                        </data>
+                    </cell>
+                    <cell id="201">
+                        <data id="202">
+                            <property name="resultSetColumn">VEHICLEREGNO</property>
+                        </data>
+                    </cell>
+                    <cell id="203">
+                        <data id="204">
+                            <property name="resultSetColumn">AUCTIONEERNAME</property>
+                        </data>
+                    </cell>
+                    <cell id="205">
+                        <data id="206">
+                            <property name="resultSetColumn">DATEREPOISSUED</property>
+                        </data>
+                    </cell>
+                    <cell id="207">
+                        <data id="208">
+                            <property name="resultSetColumn">EXPIRYDATE</property>
+                        </data>
+                    </cell>
+                    <cell id="209">
+                        <data id="210">
+                            <property name="resultSetColumn">REPOSTATUS</property>
+                        </data>
+                    </cell>
+                    <cell id="211">
+                        <data id="212">
+                            <property name="resultSetColumn">REPOSTATUS2</property>
+                        </data>
+                    </cell>
+                    <cell id="213">
+                        <data id="214">
+                            <property name="resultSetColumn">VALUATION_STATUS</property>
+                        </data>
+                    </cell>
+                    <cell id="215">
+                        <data id="216">
+                            <property name="resultSetColumn">MARKETER_STATUS</property>
+                        </data>
+                    </cell>
+                    <cell id="217">
+                        <data id="218">
+                            <property name="resultSetColumn">YARD_STATUS</property>
+                        </data>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="219">
+                    <cell id="220"/>
+                    <cell id="221"/>
+                    <cell id="222"/>
+                    <cell id="223"/>
+                    <cell id="224"/>
+                    <cell id="225"/>
+                    <cell id="226"/>
+                    <cell id="227"/>
+                    <cell id="228"/>
+                    <cell id="229"/>
+                    <cell id="230"/>
+                    <cell id="231"/>
+                    <cell id="232"/>
+                    <cell id="233"/>
+                    <cell id="234"/>
+                    <cell id="235"/>
+                    <cell id="236"/>
+                </row>
+            </footer>
+        </table>
+    </body>
+</report>
